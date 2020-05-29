@@ -9,7 +9,7 @@ const clickHandler = (event) => {
     view.className = 'view';
 
     root.removeChild(event.target);
-    window.history.replaceState(null, 'issa hoody', 'hoodies/view');
+    window.history.replaceState(null, null, 'hoodies/view');
 
     root.appendChild(view);
   }
@@ -19,7 +19,7 @@ const clickHandler = (event) => {
     confirmation.className = 'confirmation';
 
     root.removeChild(event.target);
-    window.history.replaceState(null, 'gotcha', 'gotcha');
+    window.history.replaceState(null, null, 'gotcha');
 
     root.appendChild(confirmation);
   }
@@ -30,12 +30,12 @@ const clickHandler = (event) => {
     index.className = 'index';
 
     root.removeChild(event.target);
-    window.history.replaceState(null, 'check out these guys', 'hoodies');
+    window.history.replaceState(null, null, 'hoodies');
     root.appendChild(index);
   }
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-  window.history.replaceState(null, 'check out these guys', 'hoodies');
+  window.history.replaceState(null, null, 'hoodies');
   document.addEventListener('click', clickHandler);
 });
