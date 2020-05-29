@@ -1,11 +1,12 @@
 const root = document.querySelector('#root');
 let imgPage = document.querySelector('img');
-const initialSrc = imgPage.src;
+const pubImgUrl =
+  'https://htcicek.github.io/mschf-hoody/public/hoody_index.png';
 
 const clickHandler = (event) => {
   if (event.target.className === 'index') {
     let view = document.createElement('img');
-    view.src = event.target.src.replace('index', 'hoodies/view');
+    view.src = pubImgUrl.replace('index', 'hoodies/view');
     view.className = 'view';
 
     root.removeChild(event.target);
@@ -15,7 +16,7 @@ const clickHandler = (event) => {
   }
   if (event.target.className === 'view') {
     let confirmation = document.createElement('img');
-    confirmation.src = event.target.src.replace('view', 'confirmation');
+    confirmation.src = pubImgUrl.replace('index', 'confirmation');
     confirmation.className = 'confirmation';
 
     root.removeChild(event.target);
@@ -26,7 +27,7 @@ const clickHandler = (event) => {
 
   if (event.target.className === 'confirmation') {
     let index = document.createElement('img');
-    index.src = event.target.src.replace('confirmation', 'index');
+    index.src = pubImgUrl;
     index.className = 'index';
 
     root.removeChild(event.target);
