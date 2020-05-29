@@ -33,7 +33,7 @@ const clickHandler = (event) => {
     // root.removeChild(event.target);
     // window.history.replaceState(null, null, '');
     // root.appendChild(index);
-    window.location = 'berfinayhan.com';
+    window.location.replace('https://www.berfinayhan.com/');
   }
 };
 
