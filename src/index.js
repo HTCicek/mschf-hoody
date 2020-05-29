@@ -9,7 +9,8 @@ const clickHandler = (event) => {
     view.className = 'view';
 
     root.removeChild(event.target);
-    window.history.pushState('hoodies', 'Check this out', 'view');
+    window.history.replaceState(null, 'issa hoody', 'hoodies/view');
+
     root.appendChild(view);
   }
   if (event.target.className === 'view') {
@@ -18,7 +19,8 @@ const clickHandler = (event) => {
     confirmation.className = 'confirmation';
 
     root.removeChild(event.target);
-    window.history.pushState('hoodies', 'lmao', 'gotchu');
+    window.history.replaceState(null, 'gotcha', 'gotcha');
+
     root.appendChild(confirmation);
   }
 
@@ -28,12 +30,12 @@ const clickHandler = (event) => {
     index.className = 'index';
 
     root.removeChild(event.target);
-    window.history.pushState('', '', 'hoodies');
+    window.history.replaceState(null, 'check out these guys', 'hoodies');
     root.appendChild(index);
   }
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-  window.history.pushState('hoodies', 'hoodies', 'hoodies');
+  window.history.replaceState(null, 'check out these guys', 'hoodies');
   document.addEventListener('click', clickHandler);
 });
