@@ -1,0 +1,9 @@
+#root {
+  width: 100vw;
+}
+img {
+  max-width: 100%;
+}
+img.confirmation {
+  transform: translate(0px, -200px)
+}
