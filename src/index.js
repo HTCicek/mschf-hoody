@@ -5,10 +5,11 @@ const initialSrc = imgPage.src;
 const clickHandler = (event) => {
   if (event.target.className === 'index') {
     let view = document.createElement('img');
-    view.src = event.target.src.replace('index', 'view');
+    view.src = event.target.src.replace('index', 'hoodies/view');
     view.className = 'view';
 
     root.removeChild(event.target);
+    window.history.pushState('hoodies', 'Check this out', 'view');
     root.appendChild(view);
   }
   if (event.target.className === 'view') {
@@ -17,6 +18,7 @@ const clickHandler = (event) => {
     confirmation.className = 'confirmation';
 
     root.removeChild(event.target);
+    window.history.pushState('hoodies', 'lmao', 'gotchu');
     root.appendChild(confirmation);
   }
 
@@ -26,10 +28,12 @@ const clickHandler = (event) => {
     index.className = 'index';
 
     root.removeChild(event.target);
+    window.history.pushState('', '', 'hoodies');
     root.appendChild(index);
   }
 };
 
 document.addEventListener('DOMContentLoaded', () => {
+  window.history.pushState('hoodies', 'hoodies', 'hoodies');
   document.addEventListener('click', clickHandler);
 });
