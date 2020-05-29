@@ -10,7 +10,7 @@ const clickHandler = (event) => {
     view.className = 'view';
 
     root.removeChild(event.target);
-    window.history.replaceState(null, null, 'hoodies/view');
+    window.history.replaceState(null, null, 'hoodies');
 
     root.appendChild(view);
   }
@@ -20,23 +20,24 @@ const clickHandler = (event) => {
     confirmation.className = 'confirmation';
 
     root.removeChild(event.target);
-    window.history.replaceState(null, null, 'gotcha');
+    window.history.replaceState(null, null, 'berfin');
 
     root.appendChild(confirmation);
   }
 
   if (event.target.className === 'confirmation') {
-    let index = document.createElement('img');
-    index.src = pubImgUrl;
-    index.className = 'index';
+    // let index = document.createElement('img');
+    // index.src = pubImgUrl;
+    // index.className = 'index';
 
-    root.removeChild(event.target);
-    window.history.replaceState(null, null, 'hoodies');
-    root.appendChild(index);
+    // root.removeChild(event.target);
+    // window.history.replaceState(null, null, '');
+    // root.appendChild(index);
+    window.location = 'berfinayhan.com';
   }
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-  window.history.replaceState(null, null, 'hoodies');
+  window.history.replaceState(null, null, '');
   document.addEventListener('click', clickHandler);
 });
