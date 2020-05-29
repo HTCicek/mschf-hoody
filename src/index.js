@@ -6,7 +6,7 @@ const pubImgUrl =
 const clickHandler = (event) => {
   if (event.target.className === 'index') {
     let view = document.createElement('img');
-    view.src = pubImgUrl.replace('index', 'hoodies/view');
+    view.src = pubImgUrl.replace('index', 'view');
     view.className = 'view';
 
     root.removeChild(event.target);
